@@ -11,3 +11,14 @@
 *.lai
 *.la
 *.a
+
+.ucpp
+.wrmakefile
+.wrproject
+.cproject
+.project
+Makefile
+PPC603gnu
+.directory
+*.*~
+*.*.kate*
