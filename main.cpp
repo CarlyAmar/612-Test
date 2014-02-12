@@ -15,7 +15,7 @@ robot_class::robot_class()
 
 void robot_class::RobotInit()
 {
-    std::printf("TEST CODE 1.1");
+    std::printf("TEST CODE 1.0");
     robot = this;
     driverJoy = new SmoothJoystick(DRIVER_JOY_PORT);
     
