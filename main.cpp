@@ -15,6 +15,7 @@ robot_class::robot_class()
 
 void robot_class::RobotInit()
 {
+    std::printf("TEST CODE 1.0");
     robot = this;
     driverJoy = new SmoothJoystick(DRIVER_JOY_PORT);
     
@@ -33,22 +34,22 @@ void robot_class::DisabledPeriodic()
 
 void robot_class::AutonomousInit()
 {
-
+    testJag = new Talon(1,1);
 }
 
 void robot_class::AutonomousPeriodic()
 {
-
+    testJag->Set(1.0);
 }
 
 void robot_class::TeleopInit()
 {
-
+    testJag = new Talon(1,1);
 }
 
 void robot_class::TeleopPeriodic()
 {
-
+    testJag->Set(0.5); 
 }
 
 void robot_class::TestInit()
@@ -128,6 +129,18 @@ void robot_class::getButtons()
             motors->disable();
         }
     }
+    /*
+    else if (driverJoy->GetRawButton(BUTTON_L2))
+    {
+        speed = speed + 0.02;
+        std::printf("Jag Speed: %f \n", speed);
+    }
+    else if (driverJoy->GetRawButton(BUTTON_R2))
+    {
+        speed = speed - 0.02;
+        std::printf("Jag Speed: %f \n", speed);
+    }
+    */
 }
 
 START_ROBOT_CLASS(robot_class)

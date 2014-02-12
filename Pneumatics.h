@@ -17,6 +17,7 @@ public:
     void runPneumatics(int pnum);
     void toggleSolenoid(DoubleSolenoid* sol);
     void pressurize();
+    DoubleSolenoid* piston;
 private:
     DoubleSolenoid* shift1;//8,7
     DoubleSolenoid* clamp; //6,5

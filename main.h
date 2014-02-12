@@ -3,6 +3,8 @@
 
 #include <IterativeRobot.h>
 #include <Joystick.h>
+#include <Jaguar.h>
+#include <Talon.h>
 
 #include "SmoothJoystick.h"
 #include "Sensors.h"
@@ -42,10 +44,12 @@ public:
     Pneumatics* pneumatics;
     UpdateRegistry updateRegistry;
     int selection;
+    float speed;
 private:
     BUTTON button;
     void printStuff();
     void getButtons();
+    Talon* testJag;
 };
 
 #endif // MAIN_H
